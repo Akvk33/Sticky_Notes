@@ -5,12 +5,11 @@ const notesArea = `<div class="notesArea col-md-3 px-0">
                 </div>
             </div>`
 
-
 $('.hero').click(function (event) {
     const tar = event.target;
     if (tar.classList.contains('add')) {
         /* $('.heroBody').append(notesArea); */
-        const $note = $(notesArea).appendTo(".heroBody");
+        const $note = $(notesArea).hide().appendTo(".heroBody").slideDown(300).delay(800).fadeTo(400, 1)
         $(".notesArea").draggable({
             scroll: true,
             cancel: ".notesContent,.deleteBtn",
@@ -24,7 +23,9 @@ $('.hero').click(function (event) {
     }
 
     if (tar.classList.contains('deleteBtn')) {
-        tar.closest('.notesArea').remove();
+        $(tar.closest('.notesArea')).slideUp(300).delay(800).fadeOut(100, function () {
+            $(this).remove();
+        });
     }
 });
 

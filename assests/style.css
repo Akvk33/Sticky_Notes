@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap');
+
 .center {
     display: flex;
     justify-content: center;
@@ -5,15 +7,15 @@
 }
 
 body {
-    height: 100vh;
     background-image: url('/assests/file_000000007c20723081b2909a1cf33fd9.png');
     background-size: contain;
     background-position: center;
+    overflow: hidden;
 }
 
 .hero {
     align-self: center;
-    height: 600px;
+    /* height: 600px; */
     width: 1000px;
     border-radius: 39px;
     border-bottom-left-radius: 10px;
@@ -49,7 +51,6 @@ body {
     letter-spacing: 1rem;
     text-transform: uppercase;
     text-align: center;
-    color:papayawhip;
 }
 
 .bttn {
@@ -120,6 +121,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(139, 0, 163, 0.91);
+    margin: auto;
 }
 
 .notesContent {
@@ -160,5 +162,4 @@ body {
 
 .dragHandle {
     cursor: move;
-
 }
