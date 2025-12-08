@@ -1,0 +1,162 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    background-image: url('/assests/file_000000007c20723081b2909a1cf33fd9.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.hero {
+    align-self: center;
+    height: 600px;
+    width: 1000px;
+    border-radius: 39px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* background: transparent;
+    box-shadow: -25px -25px 30px #160330,
+        25px 25px 30px #38077c;
+     */
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 6px 3px rgba(255, 255, 255, 0.3);
+}
+
+
+.heroHeader {
+    border-top-right-radius: 39px;
+    border-top-left-radius: 39px;
+    background: transparent;
+    box-shadow: -20px 20px 41px #2a1b3e,
+        20px -20px 41px #442d66;
+    padding-bottom: 15px;
+}
+
+.header {
+    font-family: "Bitcount Prop Double Ink", system-ui;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.bttn {
+    /* border: 1px solid whitesmoke;
+    background: linear-gradient(125deg, rgb(227, 169, 10), rgb(250, 232, 117), rgb(246, 168, 25));
+    */
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 43px;
+    background: #6e5591;
+    box-shadow: inset -14px -14px 28px #54416e,
+        inset 14px 14px 28px #8869b4;
+}
+
+.btn1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+
+.heroBody {
+    height: 80vh;
+    /* makes the inside of the board behave like a nice layout area */
+    overflow-y: auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+
+}
+
+.heroBody::-webkit-scrollbar {
+    width: 12px;
+}
+
+.heroBody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.heroBody::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff00f2, #7300ff);
+    border-radius: 20px;
+    box-shadow: 0 0 12px #b300ff;
+}
+
+
+.notesArea {
+    border-radius: 10px;
+    /*  background: linear-gradient(225deg, #32204a, #3b2758);
+    box-shadow: -20px 20px 41px #31293b,
+        20px -20px 41px #442d66; */
+    background: rgba(245, 245, 245, 0.48);
+    box-shadow: -25px -25px 30px #160330,
+        25px 25px 30px #38077c;
+    padding-top: 12px;
+    width: 280px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(139, 0, 163, 0.91);
+}
+
+.notesContent {
+    padding: 5px;
+    color: papayawhip;
+    font-weight: 500;
+    height: 150px;
+    outline: none;
+    /* removes blue border when focused */
+    overflow-y: auto;
+    /* scroll if content overflows */
+
+}
+
+.notesContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notesContent::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.notesContent::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.notesContent::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.deleteBtn {
+    border-radius: 15px !important;
+    background: #6e5591;
+    box-shadow: inset -14px -14px 28px #54416e,
+        inset 14px 14px 28px #8869b4;
+}
+
+.dragHandle {
+    cursor: move;
+}
