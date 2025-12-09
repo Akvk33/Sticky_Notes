@@ -9,9 +9,8 @@ $('.hero').click(function (event) {
     const tar = event.target;
     if (tar.classList.contains('add')) {
         /* $('.heroBody').append(notesArea); */
-        const $note = $(notesArea).hide().appendTo(".heroBody").slideDown(300).delay(800).fadeTo(400, 1)
+        const $note = $(notesArea).hide().appendTo(".heroBody").slideDown(300).delay(800).fadeTo(400, 1);
         $(".notesArea").draggable({
-            scroll: true,
             cancel: ".notesContent,.deleteBtn",
             containment: ".heroBody",
             cursor: "move"
