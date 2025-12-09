@@ -185,7 +185,7 @@ body {
     }
 
     .heroBody {
-        height: 100vh;
+        height: 90vh;
     }
 
     .btn1 {
@@ -208,4 +208,5 @@ body {
     .header {
         letter-spacing: .2rem;
     }
+
 }
