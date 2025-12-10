@@ -34,8 +34,9 @@ $('#exampleModal').click(function (e) {
         }
         $(".notesArea")/* .slideUp(300).delay(800).fadeOut(100, function () {
             $(this).remove();
-        }); */.hide("pulsate", 1000, callback);
+        }); */.hide("pulsate", 1500, callback);
 
 
     }
 });
+
