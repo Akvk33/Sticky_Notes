@@ -167,6 +167,23 @@ body {
         25px 25px 30px #38077c;
 }
 
+.modal-content {
+    border-radius: 30px !important;
+    background: #422064 !important;
+    box-shadow: inset 19px 19px 26px #351a50,
+        inset -19px -19px 26px #4f2678 !important;
+    /* background: transparent !important; */
+    color: whitesmoke !important;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
 @media (max-width:835px) {
     .hero {
         width: 100%;
@@ -208,8 +225,4 @@ body {
     .header {
         letter-spacing: .2rem;
     }
-
 }
-
-
-
