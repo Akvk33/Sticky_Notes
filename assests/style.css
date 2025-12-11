@@ -122,11 +122,11 @@ body {
     -webkit-backdrop-filter: blur(15px);
 }
 
-.notesArea:hover {
+/* .notesArea:hover {
     transition-duration: .3s;
     transform: translate(-5px, -5px);
 }
-
+ */
 .bord {
     transition-duration: .5s;
     transition-timing-function: linear;
@@ -237,4 +237,5 @@ body {
     .header {
         letter-spacing: .2rem;
     }
+
 }
