@@ -6,6 +6,7 @@
     align-items: center;
 }
 
+
 body {
     background-image: url('/assests/file_000000007c20723081b2909a1cf33fd9.png');
     background-size: cover;
@@ -119,8 +120,19 @@ body {
     width: 280px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 3px solid rgba(139, 0, 163, 0.91);
 }
+
+.notesArea:hover {
+    transition-duration: .3s;
+    transform: translate(-5px, -5px);
+}
+
+.bord {
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    outline: 3px solid rgb(196, 27, 242);
+}
+
 
 .notesContent {
     padding: 5px;
