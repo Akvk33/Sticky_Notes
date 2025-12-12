@@ -109,6 +109,7 @@ body {
 
 
 .notesArea {
+    position: relative;
     border-radius: 10px;
     /*  background: linear-gradient(225deg, #32204a, #3b2758);
     box-shadow: -20px 20px 41px #31293b,
@@ -125,8 +126,8 @@ body {
 /* .notesArea:hover {
     transition-duration: .3s;
     transform: translate(-5px, -5px);
-}
- */
+} */
+
 .bord {
     transition-duration: .5s;
     transition-timing-function: linear;
@@ -164,14 +165,47 @@ body {
 }
 
 .deleteBtn {
-    border-radius: 15px !important;
+    color: #3c3c3c !important;
+    position: absolute;
+    border: 0 !important;
+    bottom: 4px;
+    left: 30px;
+    /*  border-radius: 15px !important;
     background: #6e5591;
     box-shadow: inset -14px -14px 28px #54416e,
-        inset 14px 14px 28px #8869b4;
+        inset 14px 14px 28px #8869b4; */
+}
+
+.moveBtn {
+    color: #3c3c3c !important;
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+}
+
+.zoomBtn {
+    color: #3c3c3c !important;
+    position: absolute;
+    bottom: 4px;
+    left: 50px;
+}
+
+.zoomContent {
+    width: 100%;
+}
+
+.zoomed-note {
+    width: 100%;
+    height: auto;
+    font-size: 1.15rem;
+    /* bigger text for zoom */
+    padding: 1rem;
+    color: peachpuff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .dragHandle {
-    cursor: move;
+    cursor: pointer;
 }
 
 .notesBottom {
@@ -231,11 +265,33 @@ body {
         left: 83.5%;
         top: 83%;
     }
+
+    .deleteBtn {
+        color: #3c3c3c !important;
+        position: absolute;
+        border: 0 !important;
+        bottom: 4px;
+        left: 30px;
+        /*  border-radius: 15px !important;
+    background: #6e5591;
+    box-shadow: inset -14px -14px 28px #54416e,
+        inset 14px 14px 28px #8869b4; */
+    }
+
+    .moveBtn {
+        display: none;
+    }
+
+    .zoomBtn {
+        color: #3c3c3c !important;
+        position: absolute;
+        bottom: 4px;
+        left: 10px;
+    }
 }
 
 @media (max-width:500px) {
     .header {
         letter-spacing: .2rem;
     }
-
 }
