@@ -54,8 +54,14 @@ $(document).on("click", ".zoomBtn", function (event) {
     $clone.find(".deleteBtn, .moveBtn,.zoomBtn,.notesBottom,.ui-draggable").remove();
     $clone.removeClass("col-md-3");
     $clone.addClass("zoomed-note");
-    $clone.find('.notesContent').removeAttr("contenteditable");
+    /* $clone.find('.notesContent').removeAttr("contenteditable"); */
     $(".zoomContent").empty().append($clone);
     const modal = new bootstrap.Modal(document.getElementById("zoomModal"));
     modal.show();
+    $('.close').on("click",function(){
+        $note.find('.notesContent').empty().append($clone.find('.notesContent').text())
+    })
+    /* if(.classList.contains('close')){
+        $note.find('.notesContent').empty().append($clone.find('.notesContent').text());
+    } */ 
 });
