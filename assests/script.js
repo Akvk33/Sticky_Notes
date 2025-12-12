@@ -58,10 +58,11 @@ $(document).on("click", ".zoomBtn", function (event) {
     $(".zoomContent").empty().append($clone);
     const modal = new bootstrap.Modal(document.getElementById("zoomModal"));
     modal.show();
-    $('.close').on("click", function () {
+     $('.close').on("click", function () {
         $note.find('.notesContent').empty().append($clone.find('.notesContent').text())
     })
     /* if(.classList.contains('close')){
         $note.find('.notesContent').empty().append($clone.find('.notesContent').text());
     } */
 });
+
