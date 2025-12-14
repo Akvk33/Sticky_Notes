@@ -38,6 +38,21 @@ $(document).click(function (event) {
     }
 });
 
+$(document).on("click", '.delAll', function () {
+    if (document.querySelector('.heroBody').children.length == 0) {
+        $('.delete').find('.modal-title').empty().text("Empty!!!");
+        $('.delete').find('.modal-body').empty().text('There is nothing to DELETE...');
+        $('.delete').find('.del').css("display", "none");
+        $('.delete').find('.bg-secondary').css("display", "block");
+    }
+    else {
+        $('.delete').find('.modal-title').empty().text("Are you sure...");
+        $('.delete').find('.modal-body').empty().text('Please Think A Second Before Delete All NOTES!!!');
+        $('.delete').find('.bg-secondary').css("display", "none");
+        $('.delete').find('.del').css("display", "block");
+    }
+})
+
 $('#exampleModal').click(function (e) {
     e.preventDefault();
     if (e.target.classList.contains('del')) {
@@ -48,7 +63,7 @@ $('#exampleModal').click(function (e) {
     }
 });
 
-$(document).on("click", ".zoomBtn", function (event) {
+$(document).on("click", ".zoomBtn", function () {
     const $note = $(this).closest(".notesArea");
     const $clone = $note.clone(true, true);
     $clone.find(".deleteBtn, .moveBtn,.zoomBtn,.notesBottom,.ui-draggable").remove();
@@ -58,11 +73,7 @@ $(document).on("click", ".zoomBtn", function (event) {
     $(".zoomContent").empty().append($clone);
     const modal = new bootstrap.Modal(document.getElementById("zoomModal"));
     modal.show();
-     $('.close').on("click", function () {
+    $('.close').on("click", function () {
         $note.find('.notesContent').empty().append($clone.find('.notesContent').text())
     })
-    /* if(.classList.contains('close')){
-        $note.find('.notesContent').empty().append($clone.find('.notesContent').text());
-    } */
 });
-
