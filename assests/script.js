@@ -1,18 +1,31 @@
 const notesArea =
     `<div class="notesArea col-md-3 px-0">
                 <div class="notesContent" contenteditable="true">Enter Your Notes Here...</div>
-                <div class="notesBottom d-flex justify-content-center py-3">
+                <div class="notesBottom d-flex justify-content-end align-items-start py-3">
                 </div>
                 <i class="bi bi-trash-fill deleteBtn dragHandle p-0"></i>
                 <i class="bi bi-arrows-move moveBtn dragHandle p-0"></i>
                 <i class="bi bi-arrows-angle-expand dragHandle zoomBtn p-0 "></i>
             </div>
             `
+function getDateTime() {
+    const d = new Date();
+    return d.toLocaleString("en-IN", {
+        day: "numeric",
+        month: "numeric",
+        year: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+    });
+}
+
 
 $(document).click(function (event) {
     const tar = event.target;
     if (tar.classList.contains('add')) {
         const $note = $(notesArea).hide().appendTo(".heroBody").show("clip", 500, function () {
+            $note.find('.notesBottom').text(getDateTime());
             $(this).draggable({
                 cancel: ".notesContent,.deleteBtn,.notesBottom,.zoomBtn",
                 containment: ".heroBody",
