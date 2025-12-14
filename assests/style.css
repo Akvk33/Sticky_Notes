@@ -168,25 +168,21 @@ body {
     color: #3c3c3c !important;
     position: absolute;
     border: 0 !important;
-    bottom: 4px;
+    bottom: 6%;
     left: 30px;
-    /*  border-radius: 15px !important;
-    background: #6e5591;
-    box-shadow: inset -14px -14px 28px #54416e,
-        inset 14px 14px 28px #8869b4; */
 }
 
 .moveBtn {
     color: #3c3c3c !important;
     position: absolute;
-    bottom: 4px;
+    bottom: 6%;
     left: 10px;
 }
 
 .zoomBtn {
     color: #3c3c3c !important;
     position: absolute;
-    bottom: 4px;
+    bottom: 6%;
     left: 50px;
 }
 
@@ -270,8 +266,8 @@ body {
         color: #3c3c3c !important;
         position: absolute;
         border: 0 !important;
-        bottom: 4px;
-        left: 30px;
+        bottom: 6%;
+        left: 10%;
         /*  border-radius: 15px !important;
     background: #6e5591;
     box-shadow: inset -14px -14px 28px #54416e,
@@ -285,8 +281,8 @@ body {
     .zoomBtn {
         color: #3c3c3c !important;
         position: absolute;
-        bottom: 4px;
-        left: 10px;
+        bottom: 6%;
+        left: 3%;
     }
 }
 
